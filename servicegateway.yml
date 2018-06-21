@@ -22,7 +22,7 @@ zuul:
     cartservice: /cartservice/**
     productservice: /productservice/**
     authservice:
-      sensitiveHeaders: Cookie,Set-Cookie
+      sensitiveHeaders:
       path: /uaa/**
       serviceId: authservice
       stripPrefix: false

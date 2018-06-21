@@ -19,10 +19,10 @@ eureka:
 
 zuul:
   routes:
-    cartservice: /cart-service/**
-    productservice: /product-service/**
+    cartservice: /cartservice/**
+    productservice: /productservice/**
     authservice:
-      sensitiveHeaders:
+      sensitiveHeaders: Cookie,Set-Cookie
       path: /uaa/**
       serviceId: authservice
       stripPrefix: false
@@ -30,7 +30,7 @@ zuul:
   host:
     connect-timeout-millis: 60000
     socket-timeout-millis: 60000
-
+ 
 security:
   # Disable Spring Boot basic authentication
   basic:
